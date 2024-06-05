@@ -6,7 +6,7 @@ library(Polychrome)
 
 # Portal metadata
 app_title = "Monitoring the Ecological and Oceanographic Impacts of Floating Offshore Wind Developments in California"
-app_description = "An interactive visualization of long-term ocean monitoring programs that are key to measuring the impacts of floating offshore wind developments in California."
+app_description = "Note: best used on desktop. Interact with the long-term ocean monitoring programs that are critical to understanding the impacts of floating offshore wind developments in California. By selecting and deselecting Essential Ocean Variables and/or Monitoring Programs, you can identify gaps in baseline datasets, informing future monitoring needs and opportunities."
 attribution_string = "Sources: Esri, spatial data sources available upon request"
 provided_crs <- st_crs(4326)
 
@@ -25,7 +25,7 @@ variable_list <- variable_types$variable
 
 # What organizations are available to filter on?
 organization_list <- unique(datasets$organization)
-colors = glasbey.colors(length(organization_list))
+colors = light.colors(length(organization_list))
 pal = colorFactor(colors, domain = organization_list)
 
 

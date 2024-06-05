@@ -5,6 +5,6 @@ account: elizathomas
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 12131888
-bundleId: 8705224
+bundleId: 8706069
 url: https://elizathomas.shinyapps.io/california_ofw_monitoring/
 version: 1

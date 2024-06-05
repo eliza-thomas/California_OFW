@@ -1,68 +1,69 @@
-organization,variable
-CalCOFI,Marine mammals
-CalCOFI,Sea birds
-CalCOFI,Fish
-CalCOFI,Nutrients 
-CalCOFI,Primary production
-CalCOFI,Surface currents
-CalCOFI,Temperature
-CalCOFI,Salinity
-CCE LTER,Marine mammals
-CCE LTER,Sea birds
-CCE LTER,Nutrients 
-CCE LTER,Primary production
-CCE LTER,Wind
-CCE LTER,Temperature
-CCE LTER,Salinity
-CCFRP,Benthic habitat
-CCFRP,Fish
-CCFRP,Wind
-CCFRP,Temperature
-CCFRP,Salinity
-CCES,Marine mammals
-CCES,Sea birds
-CCES,Fish
-CCES,Surface currents
-CCES,Temperature
-CCES,Salinity
-GBTS,Benthic habitat
-GBTS,Fish
-GBTS,Primary production
-GBTS,Wind
-GBTS,Temperature
-GBTS,Salinity
-H&L Survey,Benthic habitat
-H&L Survey,Fish
-H&L Survey,Primary production
-H&L Survey,Wind
-H&L Survey,Temperature
-H&L Survey,Salinity
-Hake ATS,Marine mammals
-Hake ATS,Sea birds
-Hake ATS,Fish
-Hake ATS,Surface currents
-Hake ATS,Temperature
-Hake ATS,Salinity
-PISCO,Benthic habitat
-PISCO,Fish
-PISCO,Nutrients 
-PISCO,Primary production
-PISCO,Wind
-PISCO,Surface currents
-PISCO,Temperature
-RREAS,Marine mammals
-RREAS,Sea birds
-RREAS,Fish
-RREAS,Primary production
-RREAS,Temperature
-RREAS,Salinity
-SCB MBON,Benthic habitat
-SCB MBON,Fish
-SCCWRP,Benthic habitat
-SCCWRP,Fish
-SCCWRP,Salinity
-MBARI Coastal Buoys,Primary production
-MBARI Coastal Buoys,Temperature
-MBARI Coastal Buoys,Salinity
-SCCOOS HFRs,Surface currents
-PNNLL,Surface currents
+shortname,variable,organization
+CalCOFI,Marine mammals,California Cooperative Oceanic Fisheries Investigations
+CalCOFI,Sea birds,California Cooperative Oceanic Fisheries Investigations
+CalCOFI,Fish,California Cooperative Oceanic Fisheries Investigations
+CalCOFI,Nutrients ,California Cooperative Oceanic Fisheries Investigations
+CalCOFI,Primary production,California Cooperative Oceanic Fisheries Investigations
+CalCOFI,Surface currents,California Cooperative Oceanic Fisheries Investigations
+CalCOFI,Temperature,California Cooperative Oceanic Fisheries Investigations
+CalCOFI,Salinity,California Cooperative Oceanic Fisheries Investigations
+CalCOFI,Wind,California Cooperative Oceanic Fisheries Investigations
+CCE LTER,Marine mammals,California Current Ecosystem LTER
+CCE LTER,Sea birds,California Current Ecosystem LTER
+CCE LTER,Nutrients ,California Current Ecosystem LTER
+CCE LTER,Primary production,California Current Ecosystem LTER
+CCE LTER,Wind,California Current Ecosystem LTER
+CCE LTER,Temperature,California Current Ecosystem LTER
+CCE LTER,Salinity,California Current Ecosystem LTER
+CCFRP,Benthic habitat,California Collaborative Fisheries Research Program
+CCFRP,Fish,California Collaborative Fisheries Research Program
+CCFRP,Wind,California Collaborative Fisheries Research Program
+CCFRP,Temperature,California Collaborative Fisheries Research Program
+CCFRP,Salinity,California Collaborative Fisheries Research Program
+CCES,Marine mammals,California Current Ecosystem Survey
+CCES,Sea birds,California Current Ecosystem Survey
+CCES,Fish,California Current Ecosystem Survey
+CCES,Surface currents,California Current Ecosystem Survey
+CCES,Temperature,California Current Ecosystem Survey
+CCES,Salinity,California Current Ecosystem Survey
+GBTS,Benthic habitat,Groundfish Bottom Trawl Survey
+GBTS,Fish,Groundfish Bottom Trawl Survey
+GBTS,Primary production,Groundfish Bottom Trawl Survey
+GBTS,Wind,Groundfish Bottom Trawl Survey
+GBTS,Temperature,Groundfish Bottom Trawl Survey
+GBTS,Salinity,Groundfish Bottom Trawl Survey
+H&L Survey,Benthic habitat,NOAA Rockfish Hook & Line Survey
+H&L Survey,Fish,NOAA Rockfish Hook & Line Survey
+H&L Survey,Primary production,NOAA Rockfish Hook & Line Survey
+H&L Survey,Wind,NOAA Rockfish Hook & Line Survey
+H&L Survey,Temperature,NOAA Rockfish Hook & Line Survey
+H&L Survey,Salinity,NOAA Rockfish Hook & Line Survey
+Hake ATS,Marine mammals,Pacific Hake Acoustic Trawl Survey
+Hake ATS,Sea birds,Pacific Hake Acoustic Trawl Survey
+Hake ATS,Fish,Pacific Hake Acoustic Trawl Survey
+Hake ATS,Surface currents,Pacific Hake Acoustic Trawl Survey
+Hake ATS,Temperature,Pacific Hake Acoustic Trawl Survey
+Hake ATS,Salinity,Pacific Hake Acoustic Trawl Survey
+PISCO,Benthic habitat,Partnership for Interdisciplinary Studies of Coastal Oceans
+PISCO,Fish,Partnership for Interdisciplinary Studies of Coastal Oceans
+PISCO,Nutrients,Partnership for Interdisciplinary Studies of Coastal Oceans
+PISCO,Primary production,Partnership for Interdisciplinary Studies of Coastal Oceans
+PISCO,Wind,Partnership for Interdisciplinary Studies of Coastal Oceans
+PISCO,Surface currents,Partnership for Interdisciplinary Studies of Coastal Oceans
+PISCO,Temperature,Partnership for Interdisciplinary Studies of Coastal Oceans
+RREAS,Marine mammals,NOAA Rockfish Recruitment and Ecosystem Assessment Survey
+RREAS,Sea birds,NOAA Rockfish Recruitment and Ecosystem Assessment Survey
+RREAS,Fish,NOAA Rockfish Recruitment and Ecosystem Assessment Survey
+RREAS,Primary production,NOAA Rockfish Recruitment and Ecosystem Assessment Survey
+RREAS,Temperature,NOAA Rockfish Recruitment and Ecosystem Assessment Survey
+RREAS,Salinity,NOAA Rockfish Recruitment and Ecosystem Assessment Survey
+SCB MBON,Benthic habitat,Southern California Bight MBON
+SCB MBON,Fish,Southern California Bight MBON
+SCCWRP,Benthic habitat,Southern California Coastal Water Research Project
+SCCWRP,Fish,Southern California Coastal Water Research Project
+SCCWRP,Salinity,Southern California Coastal Water Research Project
+MBARI Coastal Buoys,Primary production,MBARI Coastal Buoys
+MBARI Coastal Buoys,Temperature,MBARI Coastal Buoys
+MBARI Coastal Buoys,Salinity,MBARI Coastal Buoys
+SCCOOS HFRs,Surface currents, SCCOOS High Frequency Radars
+PNNLL,Surface currents,Pacific Northwest Natiopnal Laboratory Lidar Buoy Program

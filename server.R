@@ -25,17 +25,7 @@ function(input, output, session) {
   }
   
   organization_polygons = bind_rows(organization_polygon_map, .id = "organization") %>% select(organization,geometry)
-  
-  # Read each of the shapefiles in via their encompassing Organization folder - POINTS
-  organization_points_map = list()
-  for (folder in list.dirs(here("data","dataset_points/"), full.names = FALSE, recursive = FALSE)) {
-    geometry = read_sf(here("data", "dataset_points", folder)) %>% st_transform(st_crs(4326)) %>% st_zm()
-    organization_points_map[[folder]] = geometry
-  }
-  
-  organization_points = bind_rows(organization_points_map, .id = "organization") %>% select(organization,geometry) %>% filter(!st_is_empty(geometry)) %>% as_Spatial()
-  
-  
+
   ## Interactive Map ##
   # Create a Leaflet map
   output$map <- renderLeaflet({
@@ -46,14 +36,18 @@ function(input, output, session) {
       # Set initial map position/zoom
       setView(lng = initial_long, lat = initial_lat, zoom = 8) %>% 
       # Add/style contextual shapefile
+     
+      addMapPane("polygons", zIndex = 410) %>%
+      addMapPane("leasearea", zIndex = 420) %>%
       addPolygons(
         data = context_geometry,
-        fillOpacity  = 1,
+        fillOpacity  = 0,
         stroke = TRUE,
-        color = "#000",
-        fillColor = "#fff3b0",
+        color = "white",
+        fillColor = "#fffF00",
         opacity = 1,
-        weight = 2
+        weight = 2,
+        options = pathOptions(pane="leasearea")
       ) %>%
       # Add/style dataset shapefiles
       addPolygons(
@@ -61,26 +55,16 @@ function(input, output, session) {
         data = organization_polygons,
         fillOpacity  = 0.1,
         stroke = TRUE,
-        color = "#fff",
-        fillColor = "#d41",
+        color = ~pal(organization),
+        fillColor = ~pal(organization),
         opacity = 1,
         weight = 2,
+        options = pathOptions(pane="polygons")
         
       ) %>%
-      #add circle markers
-      addCircleMarkers(
-        data = organization_points,  
-          radius = 10,
-          layerId = NULL,
-          group = "datasets_filtered",
-          stroke = TRUE,
-          color = ~pal(organization),
-          weight = 5,
-          opacity = 0.5,
-          fill = TRUE,
-          fillColor = ~pal(organization),
-          fillOpacity = 0.2
-        )
+      addLegend(colors = c("white"), labels = c("Wind Energy Area"), position ="bottomleft", values = c("Wind Energy Area"))
+    
+      
   })
   
   # Filter map data reactively
@@ -122,41 +106,23 @@ function(input, output, session) {
       st_as_sf(crs = provided_crs) %>%
       filter(!st_is_empty(geometry))
     
-    # Subset the geometries POINTS provided to Leaflet to include matches to any filter value (OR logic)
-    organization_points_filtered = union(organization_matches, variable_matches) %>%
-      group_by(organization) %>% 
-      mutate(variable_types = paste0(variable, collapse = ", ")) %>%
-      distinct(organization, variable_types)
-    
-    organization_points_filtered = st_as_sf(organization_points) %>% filter(organization %in% organization_points_filtered$organization)
-      
     leafletProxy("map") %>% clearGroup(group = "datasets_filtered") %>% clearPopups() %>% clearControls() %>% 
       addPolygons(
         group = "datasets_filtered",
         data = organization_polygons_filtered,
-        fillOpacity  = 0.1,
-        stroke = TRUE,
-        color = "#fff",
-        fillColor = "#d41",
-        opacity = 1,
-        weight = 2,
-        popup = paste("Organization: ", organization_polygons_filtered$organization, "<hr/>Variables: ", organization_polygons_filtered$variable_types),
-      ) %>%
-      addCircleMarkers(
-        data = organization_points_filtered,  
-        radius = 10,
-        layerId = NULL,
-        group = "datasets_filtered",
+        fillOpacity  = 0.2,
         stroke = TRUE,
         color = ~pal(organization),
-        weight = 5,
-        opacity = 0.5,
-        fill = TRUE,
         fillColor = ~pal(organization),
-        fillOpacity = 0.2
-        #,clusterOptions = markerClusterOptions()      <-uncomment to enable point clustering
-      ) %>% addLegend(pal = pal, position ="bottomleft", values = organization_points_filtered$organization, group = "datasets_filtered")
-  })
+        opacity = 1,
+        weight = 2,
+        options = pathOptions(pane="polygons"),
+        popup = paste("Organization: ", organization_polygons_filtered$organization, "<hr/>Variables: ", organization_polygons_filtered$variable_types),
+      ) %>% 
+      addLegend(pal = pal, position ="bottomleft", values = organization_polygons_filtered$organization, group = "datasets_filtered") %>%
+      addLegend(colors = c("white"), labels = c("Wind Energy Area"), position ="bottomleft", values = c("Wind Energy Area"))
+    
+      })
   
   
   ## Welcome message ##############################
