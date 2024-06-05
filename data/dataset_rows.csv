@@ -1,0 +1,68 @@
+organization,variable
+CalCOFI,Marine mammals
+CalCOFI,Sea birds
+CalCOFI,Fish
+CalCOFI,Nutrients 
+CalCOFI,Primary production
+CalCOFI,Surface currents
+CalCOFI,Temperature
+CalCOFI,Salinity
+CCE LTER,Marine mammals
+CCE LTER,Sea birds
+CCE LTER,Nutrients 
+CCE LTER,Primary production
+CCE LTER,Wind
+CCE LTER,Temperature
+CCE LTER,Salinity
+CCFRP,Benthic habitat
+CCFRP,Fish
+CCFRP,Wind
+CCFRP,Temperature
+CCFRP,Salinity
+CCES,Marine mammals
+CCES,Sea birds
+CCES,Fish
+CCES,Surface currents
+CCES,Temperature
+CCES,Salinity
+GBTS,Benthic habitat
+GBTS,Fish
+GBTS,Primary production
+GBTS,Wind
+GBTS,Temperature
+GBTS,Salinity
+H&L Survey,Benthic habitat
+H&L Survey,Fish
+H&L Survey,Primary production
+H&L Survey,Wind
+H&L Survey,Temperature
+H&L Survey,Salinity
+Hake ATS,Marine mammals
+Hake ATS,Sea birds
+Hake ATS,Fish
+Hake ATS,Surface currents
+Hake ATS,Temperature
+Hake ATS,Salinity
+PISCO,Benthic habitat
+PISCO,Fish
+PISCO,Nutrients 
+PISCO,Primary production
+PISCO,Wind
+PISCO,Surface currents
+PISCO,Temperature
+RREAS,Marine mammals
+RREAS,Sea birds
+RREAS,Fish
+RREAS,Primary production
+RREAS,Temperature
+RREAS,Salinity
+SCB MBON,Benthic habitat
+SCB MBON,Fish
+SCCWRP,Benthic habitat
+SCCWRP,Fish
+SCCWRP,Salinity
+MBARI Coastal Buoys,Primary production
+MBARI Coastal Buoys,Temperature
+MBARI Coastal Buoys,Salinity
+SCCOOS HFRs,Surface currents
+PNNLL,Surface currents

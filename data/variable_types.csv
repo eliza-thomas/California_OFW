@@ -1,0 +1,13 @@
+variable,category,group
+Sea turtles,biological,
+Bats,biological,
+Marine mammals,biological,
+Sea birds,biological,
+Benthic habitat,biological,
+Fish,biological,
+Nutrients,biological,upwelling indicator
+Primary production,biological,upwelling indicator
+Wind,physical,upwelling indicator
+Surface currents,physical,upwelling indicator
+Temperature,physical,ctd variable
+Salinity,physical,ctd variable
