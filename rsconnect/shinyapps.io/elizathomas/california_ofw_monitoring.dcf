@@ -1,0 +1,10 @@
+name: california_ofw_monitoring
+title: California OFW Monitoring
+username: elizathomas
+account: elizathomas
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12131888
+bundleId: 8705224
+url: https://elizathomas.shinyapps.io/california_ofw_monitoring/
+version: 1
